@@ -14,10 +14,10 @@ The official repository of the paper [PTalker: Personalized Speech-Driven 3D Tal
 <!-- Colab notebook demonstration: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Egq0_ZK5sJAAawShxC0y4JRZQuVS2X-Z?usp=sharing) -->
 
   <p align='center'>  
-    <img src='/paper_images/CCTalker.svg' width='1000'/>
+    <img src='/paper_images/PTalker.svg' width='1000'/>
   </p>
 
-Given a speech signal as input, our framework <strong>CCTalker</strong> can generate realistic 3D talking head animtions through the Compensatory Control Theory <strong>(CCT)</strong> based diffusion processes.
+Given a speech signal as input, our framework <strong>PTalker</strong> can generate stylized and realistic 3D talking head animtions through the <strong>(Style Disentanglement)</strong> and <strong>Modality Alignment</strong> modules.
 
 ## TODO
 - [x] **Release Arxiv paper.**
