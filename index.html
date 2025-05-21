@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="">
-  <meta name="keywords" content="Talking head, Audio-driven, Facial disentanglement, EDTalk">
+  <meta name="keywords" content="Talking head, Audio-driven, Facial animation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HiSTalk</title>
+  <title>PTalker</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -111,27 +111,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"> HiSTalk: Hierarchical Speech Feature-based Landmark Displacements for 3D Talking Head Animation
+          <h1 class="title is-1 publication-title">PTalker: Personalized Speech-Driven 3D Talking Head Animation via Style Disentanglement and Modality Alignment
           </h1>
-
-          <!--div class="is-size-5 publication-authors">
-            <span class="author-block">
-              	<strong>Zixing Zhang</strong><sup>1</sup>,</span>
-            <span class="author-block">
-              <strong>Bin Wang</strong><sup>1</sup>,</span>
-            <span class="author-block">
-              <strong>Huan Zhao</strong><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <strong>Bjoern </strong><sup>2</sup>,
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Hunan University,</span>
-            <span class="author-block"><sup>2</sup>Imperial College London</span>
-
-          </div-->
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -149,7 +130,7 @@
               <span class="link-block">
                 <a href=" "
 =======
-                <a href="https://arxiv.org/abs/2404.01647"
+                <a href="https://arxiv.org/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -170,7 +151,7 @@
 
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="./data/HSFTalk.mp4"
+                <a href="./data/Demos_PTalker.mp4"
 =======
                 <a href="#teaser"
                    class="external-link button is-normal is-rounded is-dark">
@@ -182,7 +163,7 @@
               </span>
               <!-- Codes Link. -->
               <span class="link-block">
-                <a href="https://github.com/wangryhen/HSFTalk_Anonymous"
+                <a href="https://github.com/rrusereeuser/PTalker"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -205,7 +186,7 @@
         	<div class="box">
             <div class="column">
                 <video class="video-player" poster="" id="tree1" controls width="700" >
-                    <source src="./data/HSFTalk.mp4">
+                    <source src="./data/Demos_PTalker.mp4">
                 </video>
                 <!--div class="content has-text-justified">
                     <p style="font-size: 1.2em;">
@@ -216,7 +197,7 @@
            </div>
         </div>
         <h3 class="subtitle has-text-centered">
-        Demos, comparison with CodeTalker and FaceFormer. 
+        Demos, comparison with FaceDiffuser, ProbTalk3D, CodeTalker, FaceFormer... 
         </h3>
     </div>
 </section>
@@ -234,54 +215,33 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Speech-driven 3D facial animation has gained significant attention for its ability to create realistic and expressive facial animations in 3D space based on speech. 
-            Landmarks can comprehensively and efficiently describe speech-related movements.
-            However, existing methods do not fully exploit the implicit context information of speech, but rather simplify using single-level (i. e., frame-level) speech features to learn landmarks and 
-            then map them into the entire facial animation. 
-            They largely overlooked the relationships between landmarks in distinct temporal regions and different-level speech features (e. g., phonemes, words, and utterances), resulting in over-smoothed 
-            facial movements. In the present work, we propose a novel framework, namely <strong>Hierarchical Speech feature-based 3D Talking head animation (HiSTalk)</strong>, 
-            to explore the correlations between different-level speech features and facial landmarks. 
-            This framework consists of two modules: Hierarchical Speech Features to Sparse landmark displacements (HSF2S) and Sparse landmarks to Dense landmarks (S2D). 
-            Specifically, <strong>HSF2S</strong> is a hierarchical structure-based encoder to establish the correlations between sparse facial landmark displacements and different-level speech features; 
-            then, <strong>S2D</strong> -- a Transformer-based multi-branch fusion decoder -- generates the corresponding dense motion fields based on these sparse landmarks. 
-            Furthermore, HSF2S includes a squeeze and extraction weight generation mechanism to calculate the contributions of different-level speech features to landmarks, 
-            and S2D includes an attention-based fusion operation to synthesize dense facial deformations, which ensures plausible lip synchronization and facial activities. 
-            Extensive qualitative and quantitative experiments and user studies indicate that our method outperforms existing state-of-the-art methods.
-<!--              Speech-driven 3D facial animation has gained significant attention for its ability to create realistic and expressive facial animations in 3D space 
-             based on speech. Landmarks can comprehensively and efficiently describe speech-related movements. However, existing methods do not fully exploit the 
-             implicit context information of speech, but rather simplify using single-level (i. e., frame-level) speech features to learn landmarks and then map 
-             them into the entire facial animation. They largely overlooked the relationships between landmarks in distinct temporal regions and different-level 
-             speech features (e. g., phonemes, words, and utterances), resulting in over-smoothed facial movements. In the present work, we propose a novel framework, 
-             namely <strong>Hierarchical Speech Featurebased 3D Talking head animation (HSFTalk)</strong>, aiming to explore the correlations between different-level 
-             speech features and facial landmarks. This framework consists of two modules: Hierarchical Speech Features to Sparse landmark displacements (<strong>HSF2S</strong>) 
-             and Sparse landmarks to Dense landmarks (<strong>S2D</strong>). Specifically, HSF2S is a hierarchical structure-based encoder to establish the 
-             correlations between sparse facial landmark displacements and different-level speech features, and then S2D, a transformer-based decoder, generates the corresponding 
-             dense motion fields based on these sparse landmarks. Furthermore, HSF2S includes a weighted generation mechanism to calculate the contributions of different-level 
-             speech features to landmarks, which ensures plausible lip synchronization and facial activities. Extensive qualitative and quantitative experiments 
-             as well as user studies indicate that our method outperforms existing state-of-the-art methods. -->
+            Speech-driven 3D talking head generation aims to produce lifelike facial animations precisely synchronized with speech. While considerable progress has been made in achieving high lip-synchronization accuracy, 
+            existing methods largely overlook the intricate nuances of individual speaking styles, which limits personalization and realism. In this work, we present a novel framework for <strong>personalized</strong> 3D talking head animation, 
+            namely <strong>PTalker</strong>. This framework preserves speaking style through style disentanglement from audio and facial motion sequences and enhances lip-synchronization accuracy through a three-level alignment mechanism between 
+            audio and mesh modalities. Specifically, to effectively disentangle style and content, we design disentanglement constraints that encode driven audio and motion sequences into distinct style and content spaces to enhance speaking style 
+            representation. To improve lip-synchronization accuracy, we adopt a modality alignment mechanism incorporating three aspects: spatial alignment using Graph Attention Networks to capture vertex connectivity in the 3D mesh structure, 
+            temporal alignment using cross-attention to capture and synchronize temporal dependencies, and feature alignment by top-$k$ bidirectional contrastive losses and KL divergence constraints to ensure consistency between speech and mesh 
+            modalities. Extensive qualitative and quantitative experiments on public datasets demonstrate that PTalker effectively generates realistic, stylized 3D talking heads that accurately match identity-specific speaking styles, outperforming 
+            state-of-the-art methods.
             <br>
             <br>
           </p>
         </div>
       </div>
     </div>
+    </div>
 
-    <div class="content has-text-justified">
+   <!--  <div class="content has-text-justified">
     	<center>
           <img src="./data/framework.png" alt="synctalk" width="600" ></center>
           <p>
             <br>
-            Given a speech signal as input, our framework HiSTalk can generate realistic 3D talking heads through the Hierarchical Speech Features to Sparse Landmarks (HSF2S) 
-            module and the Sparse Landmarks to Dense Landmarks Displacements (S2D) module.
+            Given a speech signal as input, our framework <strong>CCTalker</strong> can generate realistic 3D talking head animtions through the Compensatory Control 
+            Theory <strong>(CCT)</strong> based diffusion processes.
           </p>
 
-          <!-- <p>
-
-          </p>
-          <p>
-
-          </p> -->
-    </div>
+          -->
+    
     
     <br>
     <br>
@@ -291,32 +251,27 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Proposed Method</h2>
         <div class="content has-text-justified">
-          <center><img src="./data/pipeline.png" alt="synctalk" width="600" ></center>
+          <center><img src="./paper_images/PTalker.png" alt="CCTalker" width="600" ></center>
           <p>
             <br>
-            Pipeline of our proposed HiSTalk. HiSTalk, learning the correlations between HSF and facial landmarks, receives a raw audio 𝐴 as input and generates a sequence of 
-            3D facial animation from sparse to dense landmark displacements. The Acoustic Feature Extractor is Wav2Vec 2.0, and the Hierarchical Feature Extractor follows the 
-            SpeechFormer++ block. The weighted generation mechanism calculates the contribution of frame-level, phoneme-level, word-level, and utterance-level speech features 
-            to landmark displacements. Then S2D uses a Transformer-based decoder to generate the dense landmark displacement sequences for rendering the animation.
+               Illustration of the proposed PTalker. The input motion sequence is first encoded by the graph attention encoder. Then, the motion style encoder  and the motion content encoder
+            extract the motion style and content features. The synchronized raw speech is encoded into audio features and audio style by the audio content encoder and the audio style encoder. 
+            The identity style encoder encodes the one-hot vector into the personal style. The motion decoder reconstructs the facial motions. 
           </p>
 
         </div>
+      </div>
+    </div>
 
         
-        <div class="content has-text-justified">
+      <!--  <div class="content has-text-justified">
           <center><img src="./data/encoder.png" alt="synctalk" width="600" ></center>
           <p>
             <br>
              Overview of hierarchical speech feature-based landmark displacements encoder with a weighted generation module.
           </p>
-          <!-- <p>
-
-          </p>
-          <p>
-
-          </p> -->
-        </div>
-    </div>
+        </div> -->
+  <!--  </div>  -->
     
     <!--/ Proposed Method. -->
 </section>
@@ -325,8 +280,8 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{2025histalk,
-  title={HiSTalk: Hierarchical Speech Feature-based Landmark Displacements for 3D Talking Head Animation},
+    <pre><code>@article{2025cctalker,
+  title={CCTalker: When Compensatory Control Theory Meets 3D Emotional Talking Head Animation},
   author={},
   journal={arXiv preprint arXiv},
   year={2025}
@@ -340,10 +295,10 @@
 <footer class="gray-background">
   <div class="container">
       <div class="content has-text-centered">
-          <a class="icon-link" href="https://arxiv.org/abs/2404.01647">
+          <a class="icon-link" href="https://arxiv.org/">
               <i class="fas fa-file-pdf"></i> <span>Paper</span>
           </a>
-          <a class="icon-link" href="https://github.com/wangryhen/HSFTalk_Anonymous" class="external-link" disabled>
+          <a class="icon-link" href="https://github.com/rrusereeuser/PTalker" class="external-link" disabled>
               <i class="fab fa-github"></i> <span>Code</span>
           </a>
       </div>
