@@ -19,6 +19,9 @@ The official repository of the paper [PTalker: Personalized Speech-Driven 3D Tal
 
 Given a speech signal as input, our framework <strong>PTalker</strong> can generate stylized and realistic 3D talking head animtions through the <strong>(Style Disentanglement)</strong> and <strong>Modality Alignment</strong> modules.
 
+## Demos
+- Please click the Project Page.
+
 ## TODO
 - [x] **Release Arxiv paper.**
 - [x] **Release Project Page.**
